@@ -21,8 +21,7 @@ WiFiClient client;
 int buzzer = 4;
 int ledVerde = 6;
 int ledAmarillo = 7;
-int ledNaranja = 8;
-int ledRojo = 9;
+int ledRojo = 8;
 
 void setup()
 {
