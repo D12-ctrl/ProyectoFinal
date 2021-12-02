@@ -81,10 +81,16 @@ void loop()
      float data3 = 4623.7 * pow(Rs3/428, - -2.659);
      
     datos1["valor"] = data1;
+    datos1["idParametro"] = 1;
+    datos1["idDispositivo"] = 1;
     
     datos2["valor"] = data2;
+    datos2["idParametro"] = 2;
+    datos2["idDispositivo"] = 2;
     
     datos3["valor"] = data3;
+    datos3["idParametro"] = 3;
+    datos3["idDispositivo"] = 3;
     
 
   String postdata1;
@@ -130,6 +136,11 @@ void loop()
     client.println();
     client.print(postdata3);
     }
-  
-  
+ 
+ if(client.connected())
+ {
+  client.stop();
+  }
+ 
+ Serial.println(postData1);
 }
